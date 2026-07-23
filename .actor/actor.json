@@ -1,0 +1,10 @@
+{
+  "actorSpecification": 1,
+  "name": "iimjobs-scraper",
+  "title": "IIMJobs Scraper — Premium MBA & Management Jobs India",
+  "description": "Scrape premium MBA and management job listings from IIMJobs.com — India's leading platform for mid to senior management careers. Extract job titles, companies, salary, experience, location and direct job links. The only IIMJobs scraper on Apify. Perfect for recruitment agencies, HR tech, talent sourcing and AI agent pipelines.",
+  "version": "0.1",
+  "buildTag": "latest",
+  "environmentVariables": {},
+  "dockerfile": "./Dockerfile"
+}
