@@ -10,6 +10,13 @@ def slugify(text: str) -> str:
     return slug.strip("-")
 
 
+def build_search_query(job_title: str, location: str = "") -> str:
+    parts = [job_title.strip()]
+    if location:
+        parts.append(f"In {location.strip()}")
+    return " ".join(parts)
+
+
 def build_search_url(job_title: str, location: str = "", page: int = 1) -> str:
     slug = slugify(job_title)
     if location:
@@ -20,6 +27,14 @@ def build_search_url(job_title: str, location: str = "", page: int = 1) -> str:
     if page > 1:
         url += f"?page={page}"
     return url
+
+
+def build_api_url(query: str, page: int = 0) -> str:
+    from urllib.parse import quote_plus
+    return (
+        f"https://gladiator.iimjobs.com/job/search"
+        f"?query={quote_plus(query)}&page={page}&posting=0&industry="
+    )
 
 
 def parse_proxy(proxy_url: str | None) -> dict | None:
