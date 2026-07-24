@@ -7,7 +7,8 @@
       "title": "Job Title / Keywords",
       "type": "string",
       "description": "Job role or keyword to search e.g. Product Manager, Investment Banking, Strategy Consultant, CFO, Marketing Manager",
-      "editor": "textfield"
+      "editor": "textfield",
+      "prefill": "Product Manager"
     },
     "location": {
       "title": "Location",
@@ -20,6 +21,7 @@
       "type": "integer",
       "description": "Maximum number of job listings to scrape",
       "default": 50,
+      "prefill": 5,
       "editor": "number"
     },
     "proxyConfiguration": {
